@@ -1,0 +1,359 @@
+body {
+  padding: 0;
+  margin: 0;
+
+  font-family: "Poppins", sans-serif;
+  background-image: url(../images/body-background.svg);
+  background-repeat: no-repeat;
+}
+
+.header {
+  margin-top: 35px;
+  flex-shrink: 1;
+}
+
+body.dark-mode {
+  background-color: #100e0e;
+  color: white;
+  transition: 0.3s;
+}
+
+body.dark-mode details {
+  background-color: black;
+}
+
+body.dark-mode summary {
+  &:hover {
+    color: aqua;
+  }
+}
+
+body.dark-mode .nav-item-link {
+  color: white;
+
+  &:hover {
+    color: #999;
+  }
+}
+
+body.dark-mode #focus {
+  color: aquamarine;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+body.dark-mode .theumarov-dark-mod {
+  color: white;
+}
+
+body.dark-mode summary {
+  color: white;
+}
+
+body.dark-mode #dark-mode-toggle {
+  background-color: #6b6b6b;
+  color: white;
+  border-radius: 5px;
+}
+
+#dark-mode-toggle {
+  width: 90px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: white;
+  cursor: pointer;
+}
+
+details summary {
+  color: black;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-section {
+  width: 100%;
+  height: 100vh;
+  flex-shrink: 1;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.theumarov-logo {
+  width: 120px;
+  height: 110px;
+  position: relative;
+  top: 10px;
+}
+
+/* .navbar{
+    display: flex;
+
+} */
+
+.nav-list {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-item-link {
+  text-decoration: none;
+  color: rgb(32, 72, 71);
+  font-weight: 500;
+  transition: 0.3s;
+  &:hover {
+    color: #6b6b6b;
+  }
+
+  &:active {
+    color: rgb(32, 72, 71);
+    opacity: 60%;
+  }
+}
+
+.nav-btn {
+  position: relative;
+  left: 365px;
+  bottom: 50px;
+}
+
+#focus {
+  color: rgb(123, 178, 255);
+}
+
+/* Section-hero */
+
+/* .hero-section{
+
+} */
+
+.hero-content {
+  margin-top: 100px;
+}
+
+.hero-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 50px;
+}
+
+/* Section2 */
+
+.section2 {
+  flex-shrink: 1;
+}
+
+.container-section2 {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  margin: auto;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.nega-kerak-title {
+  font-size: 40px;
+}
+
+.ozi-nega-kerak {
+  color: #ff0000;
+}
+
+.nega-kerak {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* Section4  */
+
+.section4-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.frontend-haqida {
+  margin-top: 50px;
+}
+
+.frontend-information-p {
+  margin-top: 20px;
+}
+
+/* Portofolio */
+
+.container-portofolio {
+  width: 500px;
+  height: 500px;
+  border: solid 1px #000;
+  max-width: 1200px;
+  display: flex;
+  margin: auto;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 50px;
+  padding-top: 20px;
+  box-sizing: border-box;
+}
+
+.title-portofolio {
+  letter-spacing: 10px;
+  margin-bottom: 90px;
+  margin-top: 50px;
+}
+
+body.dark-mode .container-portofolio {
+  border: 1px solid white;
+  padding-top: 20px;
+  box-sizing: border-box;
+}
+
+.logo-title-portofolio {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: center;
+}
+
+.portofolio-information {
+  width: 340px;
+}
+
+.portofolio-logo {
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.link-portolio-img {
+  width: 30px;
+  background-color: white;
+  border-radius: 15px;
+}
+
+body.dark-mode .link-portolio-img {
+  &:hover {
+    background-color: white;
+  }
+}
+
+#dark-mode-toggle {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  border: none;
+  background-color: #6b6b6b;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.body-dark-mode #dark-mode-toggle {
+  background-color: #6b6b6b;
+  color: white;
+}
+
+.link-img-portofolio {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+/* FAQ */
+
+.faq-section {
+  width: 100%;
+}
+
+.container-faq {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  margin: auto;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.faq-details {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* align-items: flex-start;. ushbu kod contentni ozini boricha qiladi huddi inline oxshatib (tag) */
+
+  margin-top: 40px;
+}
+
+/* Details */
+details {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+  transition: box-shadow 0.3s ease;
+}
+
+summary {
+  display: flex;
+  align-items: center;
+
+  transition: 0.3s;
+
+  &:hover {
+    cursor: pointer;
+    color: #007bff;
+  }
+}
+
+.portofolio-logo {
+  border-radius: 20%;
+}
+
+details[open] {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+details summary::marker {
+  display: none;
+}
+
+details summary {
+  position: relative;
+  padding-left: 20px;
+}
+
+details summary::before {
+  content: "▶";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease;
+}
+
+details[open] summary::before {
+  transform: translateY(-50%) rotate(90deg);
+}

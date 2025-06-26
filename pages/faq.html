@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="shortcut icon"
+      href="../images/comments-question-check.svg"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <a class="theumarov-dark-mod" href="../index.html">
+          <div class="logo-text">
+            <h2 style="font-family: 'Anton', sans-serif" class="theumarov-text">
+              THEUMAROV
+            </h2>
+          </div>
+        </a>
+        <nav class="navbar">
+          <ul class="nav-list">
+            <li class="nav-btn">
+              <button id="dark-mode-toggle">🌙 Dark</button>
+            </li>
+            <li class="nav-item">
+              <a class="nav-item-link" href="../index.html">Asosiy</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-item-link" href="./portofolio.html">Portfolio</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-item-link" id="focus" href="./faq.html">FAQ</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="faq-section">
+        <div class="container-faq">
+          <h1
+            class="faq-title"
+            data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
+          >
+            Tez-tez so'raladigan savollar (FAQ)
+          </h1>
+          <div class="faq-details">
+            <details>
+              <summary class="faq-summary">
+                1. ❓ Dasturlashni nega o‘rganayapsiz?
+              </summary>
+              Javob: Chunki bu zamonaviy kasb, mustaqil ishlash imkonini beradi
+              va muammolarni yechishni yoqtiraman.
+            </details>
+            <br />
+            <details>
+              <summary class="faq-summary">
+                2. ❓ Qaysi dasturlash tilidan boshladingiz?
+              </summary>
+              Javob: HTML, CSS va JavaScript — veb-dasturlash asoslaridan
+              boshladim.
+            </details>
+            <br />
+            <details>
+              <summary class="faq-summary">
+                3. ❓ GitHub profilingiz bormi?
+              </summary>
+              Javob: O‘quv platformalarida, YouTube’da va amaliy loyihalarda
+              o‘rganaman.
+            </details>
+            <br />
+            <details>
+              <summary class="faq-summary">
+                4. ❓ Maqsadingiz nima dasturchi sifatida?
+              </summary>
+              Javob: Yaxshi loyihalar yaratish, jamoada ishlash va uzoq muddatli
+              IT sohasida o‘sish.
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Javascript -->
+    <script>
+      const toggleBtn = document.getElementById("dark-mode-toggle");
+
+      toggleBtn.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+
+        // Agar dark mode yoqilgan bo‘lsa, uni saqlab qo‘yamiz
+        if (document.body.classList.contains("dark-mode")) {
+          localStorage.setItem("theme", "dark");
+          toggleBtn.textContent = "☀️ Light ";
+        } else {
+          localStorage.setItem("theme", "light");
+          toggleBtn.textContent = "🌙 Dark ";
+        }
+      });
+
+      // Sayt qayta yuklanganda oldingi holatni tekshiradi
+      window.onload = () => {
+        if (localStorage.getItem("theme") === "dark") {
+          document.body.classList.add("dark-mode");
+          toggleBtn.textContent = "☀️ Light ";
+        }
+      };
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

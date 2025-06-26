@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portofolio</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="shortcut icon"
+      href="../images/address-card.svg"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <a class="theumarov-dark-mod" href="./index.html">
+          <div class="logo-text">
+            <h2 style="font-family: 'Anton', sans-serif" class="theumarov-text">
+              THEUMAROV
+            </h2>
+          </div>
+        </a>
+        <nav class="navbar">
+          <ul class="nav-list">
+            <li class="nav-btn">
+              <button id="dark-mode-toggle">🌙 Dark</button>
+            </li>
+            <li class="nav-item">
+              <a class="nav-item-link" href="../index.html">Asosiy</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-item-link" id="focus" href="./portofolio.html"
+                >Portfolio</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-item-link" href="./faq.html">FAQ</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="portofolio">
+        <div
+          class="container-portofolio"
+          data-aos="flip-right"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="2000"
+        >
+          <div class="logo-title-portofolio">
+            <h2 class="title-portofolio">THEUMAROV</h2>
+            <h1 class="portofolio-title">My Portofolio</h1>
+            <p class="portofolio-information">
+              Sizga o'z portofolio sahifamni taqdim etaman. Bu sahifa orqali,
+              men bilan aloqa o'rnatishingiz, loyihalarimni ko'rishingiz va
+              menga murojaat qilishingiz mumkin
+            </p>
+
+            <div class="link-img-portofolio">
+              <a
+                target="_blank"
+                class="link-portofolio"
+                href="https://t.me/theumarov"
+              >
+                <img
+                  class="link-portolio-img"
+                  src="../images/telegram-black-icon.svg"
+                  alt="Telegram Link"
+              /></a>
+
+              <a
+                class="link-portofolio"
+                href="https://github.com/theumarov10"
+                target="_blank"
+              >
+                <img
+                  class="link-portolio-img"
+                  src="../images/github-dark-mod.png"
+                  alt="Telegram Link"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Javascript -->
+    <script>
+      const toggleBtn = document.getElementById("dark-mode-toggle");
+
+      toggleBtn.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+
+        // Agar dark mode yoqilgan bo‘lsa, uni saqlab qo‘yamiz
+        if (document.body.classList.contains("dark-mode")) {
+          localStorage.setItem("theme", "dark");
+          toggleBtn.textContent = "☀️ Light ";
+        } else {
+          localStorage.setItem("theme", "light");
+          toggleBtn.textContent = "🌙 Dark ";
+        }
+      });
+
+      // Sayt qayta yuklanganda oldingi holatni tekshiradi
+      window.onload = () => {
+        if (localStorage.getItem("theme") === "dark") {
+          document.body.classList.add("dark-mode");
+          toggleBtn.textContent = "☀️ Light ";
+        }
+      };
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
